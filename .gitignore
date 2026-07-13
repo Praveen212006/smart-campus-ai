@@ -1,0 +1,56 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+
+# Flask
+instance/
+*.log
+
+
+# Environment variables
+.env
+
+
+# Database files
+*.db
+*.sqlite3
+
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+
+# VS Code settings
+.vscode/
+
+
+# OS files
+.DS_Store
+Thumbs.db
+
+
+# Machine Learning files
+*.pkl
+*.joblib
+
+
+# Uploaded files
+uploads/
+
+
+# Temporary files
+*.tmp
+*.temp
+venv/
+__pycache__/
+*.pyc
+database.db
+.envcd 

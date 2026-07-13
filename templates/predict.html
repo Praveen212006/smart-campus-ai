@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}
+AI Admission Prediction
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+
+            <div class="card shadow p-4">
+
+
+                <h2 class="text-center text-primary mb-4">
+                    🤖 AI Admission Predictor
+                </h2>
+
+
+                <p class="text-center text-muted">
+                    Enter your score and expected cutoff to predict admission chances.
+                </p>
+
+
+
+                <form method="POST" action="/predict">
+
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Student Score
+                        </label>
+
+                        <input 
+                        type="number"
+                        name="score"
+                        class="form-control"
+                        placeholder="Enter your score"
+                        required>
+
+                    </div>
+
+
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Expected Cutoff
+                        </label>
+
+                        <input 
+                        type="number"
+                        name="cutoff"
+                        class="form-control"
+                        placeholder="Enter cutoff"
+                        required>
+
+                    </div>
+
+
+
+                    <button 
+                    type="submit"
+                    class="btn btn-primary w-100">
+
+                        Predict Admission
+
+                    </button>
+
+
+                </form>
+
+
+
+
+                {% if result %}
+
+                <div class="alert alert-success mt-4 text-center">
+
+                    <h5>
+                        Prediction Result
+                    </h5>
+
+                    <p>
+                        {{ result }}
+                    </p>
+
+                </div>
+
+                {% endif %}
+
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+{% endblock %}

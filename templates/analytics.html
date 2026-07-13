@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}
+Analytics Dashboard
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container mt-5">
+
+
+<h1 class="text-center mb-4">
+College Admission Analytics
+</h1>
+
+
+
+<div class="row">
+
+
+<div class="col-md-4">
+
+<div class="card p-4 shadow">
+
+<h3>
+{{total_colleges}}
+</h3>
+
+<p>
+Total Colleges
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<div class="col-md-4">
+
+<div class="card p-4 shadow">
+
+<h3>
+{{total_courses}}
+</h3>
+
+<p>
+Available Courses
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<div class="col-md-4">
+
+<div class="card p-4 shadow">
+
+<h3>
+{{average_cutoff}}
+</h3>
+
+<p>
+Average Cutoff
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<div class="mt-5 text-center">
+
+<h2>
+Cutoff Analysis
+</h2>
+
+
+<img src="/static/images/cutoff_chart.png"
+class="img-fluid shadow">
+
+
+</div>
+
+
+</div>
+
+
+{% endblock %}

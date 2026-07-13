@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+
+{% block title %}
+Student Registration
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="row justify-content-center align-items-center">
+
+        <!-- Left Side -->
+
+        <div class="col-lg-6 text-center">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png"
+                 class="img-fluid"
+                 width="420"
+                 alt="Register">
+
+            <h2 class="fw-bold text-primary mt-4">
+                Join Smart AI Portal
+            </h2>
+
+            <p class="text-muted">
+                Create your account and start your AI-powered admission journey.
+            </p>
+
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="col-lg-5">
+
+            <div class="card shadow-lg border-0 p-5">
+
+                <h2 class="text-center fw-bold mb-4">
+                    📝 Student Registration
+                </h2>
+
+                <form method="POST">
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            name="email"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Mobile Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            class="form-control"
+                            name="mobile"
+                            placeholder="Enter your mobile number">
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            class="form-control"
+                            name="password"
+                            placeholder="Create a password"
+                            required>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            type="password"
+                            class="form-control"
+                            name="confirm_password"
+                            placeholder="Confirm your password"
+                            required>
+
+                    </div>
+
+                    <div class="form-check mb-3">
+
+                        <input class="form-check-input"
+                               type="checkbox"
+                               required>
+
+                        <label class="form-check-label">
+
+                            I agree to the Terms & Conditions
+
+                        </label>
+
+                    </div>
+
+                    <div class="d-grid">
+
+                        <button class="btn btn-success btn-lg">
+
+                            Create Account
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+                <hr>
+
+                <div class="text-center">
+
+                    Already have an account?
+
+                    <a href="/login" class="fw-bold">
+                        Login
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

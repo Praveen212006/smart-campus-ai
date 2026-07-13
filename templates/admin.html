@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}
+Admin Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <h1 class="text-center text-primary fw-bold mb-5">
+        👨‍💼 Admin Dashboard
+    </h1>
+
+    <div class="row">
+
+        <div class="col-lg-3 mb-4">
+
+            <div class="card border-0 shadow text-center p-4">
+
+                <h1>👨‍🎓</h1>
+
+                <h2>5000+</h2>
+
+                <p>Total Students</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 mb-4">
+
+            <div class="card border-0 shadow text-center p-4">
+
+                <h1>🎓</h1>
+
+                <h2>100+</h2>
+
+                <p>Colleges</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 mb-4">
+
+            <div class="card border-0 shadow text-center p-4">
+
+                <h1>🤖</h1>
+
+                <h2>95%</h2>
+
+                <p>AI Accuracy</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 mb-4">
+
+            <div class="card border-0 shadow text-center p-4">
+
+                <h1>📊</h1>
+
+                <h2>1200</h2>
+
+                <p>Predictions</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card border-0 shadow-lg mt-4">
+
+        <div class="card-header bg-primary text-white">
+
+            <h4>Quick Actions</h4>
+
+        </div>
+
+        <div class="card-body">
+
+            <div class="row">
+
+                <div class="col-md-3 mb-3">
+
+                    <a href="/predict" class="btn btn-primary w-100">
+                        AI Prediction
+                    </a>
+
+                </div>
+
+                <div class="col-md-3 mb-3">
+
+                    <a href="/colleges" class="btn btn-success w-100">
+                        Manage Colleges
+                    </a>
+
+                </div>
+
+                <div class="col-md-3 mb-3">
+
+                    <a href="/chat" class="btn btn-warning w-100">
+                        AI Assistant
+                    </a>
+
+                </div>
+
+                <div class="col-md-3 mb-3">
+
+                    <a href="/" class="btn btn-danger w-100">
+                        Logout
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <!-- Welcome Banner -->
+
+    <div class="card border-0 shadow-lg bg-primary text-white mb-5">
+
+        <div class="card-body p-5">
+
+            <h1 class="fw-bold">
+                👋 Welcome, {{ username }}
+            </h1>
+
+            <p class="lead">
+                Manage your admission journey with AI-powered tools.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Statistics -->
+
+    <div class="row mb-5">
+
+        <div class="col-md-3">
+
+            <div class="card text-center shadow border-0">
+
+                <div class="card-body">
+
+                    <h1>🎓</h1>
+
+                    <h3>100+</h3>
+
+                    <p>Top Colleges</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="card text-center shadow border-0">
+
+                <div class="card-body">
+
+                    <h1>🤖</h1>
+
+                    <h3>95%</h3>
+
+                    <p>Prediction Accuracy</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="card text-center shadow border-0">
+
+                <div class="card-body">
+
+                    <h1>👨‍🎓</h1>
+
+                    <h3>5000+</h3>
+
+                    <p>Students</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="card text-center shadow border-0">
+
+                <div class="card-body">
+
+                    <h1>💬</h1>
+
+                    <h3>24/7</h3>
+
+                    <p>AI Support</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Features -->
+
+    <div class="row">
+
+        <div class="col-lg-4 mb-4">
+
+            <div class="card border-0 shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <h1>📈</h1>
+
+                    <h3>Admission Prediction</h3>
+
+                    <p>
+                        Predict your admission chances instantly.
+                    </p>
+
+                    <a href="/predict" class="btn btn-primary">
+                        Open
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 mb-4">
+
+            <div class="card border-0 shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <h1>🎓</h1>
+
+                    <h3>College Recommendation</h3>
+
+                    <p>
+                        Discover colleges matching your score.
+                    </p>
+
+                    <a href="/colleges" class="btn btn-success">
+                        Explore
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 mb-4">
+
+            <div class="card border-0 shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <h1>🤖</h1>
+
+                    <h3>AI Assistant</h3>
+
+                    <p>
+                        Ask questions about admissions and colleges.
+                    </p>
+
+                    <a href="/chat" class="btn btn-warning">
+                        Chat Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Quote -->
+
+    <div class="card border-0 shadow-lg mt-5">
+
+        <div class="card-body text-center">
+
+            <h3 class="text-primary">
+                💡 Success begins with the right decision.
+            </h3>
+
+            <p class="lead">
+                Let AI help you choose the best college for your future.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
