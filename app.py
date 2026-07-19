@@ -2,28 +2,19 @@ from flask import Flask, render_template, request, redirect, session
 from werkzeug.security import generate_password_hash, check_password_hash
 import sqlite3
 import pandas as pd
+import google.generativeai as genai
 import os
 from dotenv import load_dotenv
-from google import genai
+
 load_dotenv()
-client = genai.Client(
-    api_key=os.getenv("GEMINI_API_KEY")
-)
+
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+
+model = genai.GenerativeModel("gemini-2.5-flash")
+
 def ask_ai(question):
-    generation_config = {
-        "temperature": 1,
-        "max_output_tokens": 65536,
-        "top_p": 0.95,
-        "thinking_level": "high",
-    }
-
-    interaction = client.interactions.create(
-        model="models/gemini-3-flash-preview",
-        input=question,
-        generation_config=generation_config,
-    )
-
-    return interaction.output_text
+    response = model.generate_content(question)
+    return response.text
 
 from predict import predict_admission
 
