@@ -1,20 +1,38 @@
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect, session, jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
 import sqlite3
 import pandas as pd
-import google.generativeai as genai
+from openai import OpenAI
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-
-model = genai.GenerativeModel("gemini-2.5-flash")
-
+client = OpenAI(
+    api_key=os.getenv("OPENROUTER_API_KEY"),
+    base_url="https://openrouter.ai/api/v1"
+)
+print(os.getenv("OPENROUTER_API_KEY"))
 def ask_ai(question):
-    response = model.generate_content(question)
-    return response.text
+    try:
+        completion = client.chat.completions.create(
+           model="meta-llama/llama-3.1-8b-instruct",
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a helpful AI assistant for Smart Campus AI."
+                },
+                {
+                    "role": "user",
+                    "content": question
+                }
+            ]
+        )
+
+        return completion.choices[0].message.content
+
+    except Exception as e:
+        return f"AI Error: {e}"
 
 from predict import predict_admission
 
