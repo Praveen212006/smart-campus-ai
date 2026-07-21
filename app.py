@@ -378,8 +378,8 @@ def predict():
                 ascending=False
             )
 
-            colleges = colleges.to_dict("records")
-
+            colleges = colleges.head(20).to_dict("records")
+            
         except Exception as e:
             return f"Prediction Error: {e}"
 
